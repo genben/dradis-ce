@@ -99,8 +99,14 @@ gem 'rinku'
 gem 'sanitize', '5.2.1'
 
 # SQLite3 DB driver
-gem 'sqlite3'
-gem 'pg'
+group :development do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+end
+
 
 # --------------------------------------------------------- Dradis Professional
 # Authorisation
